@@ -17,6 +17,6 @@
     = f.text_field :password_digest
   .field
     = f.label :role
-    = f.text_field :role
+    = f.collection_select :role_id, Role.all, :id, :title, include_blank: 'nenhum'
   .actions
     = f.submit 'Save'
