@@ -13,8 +13,8 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :password_digest
-    = f.text_field :password_digest
+    = f.label :password, 'Senha'
+    = f.password_field :password
   .field
     = f.label :role
     = f.collection_select :role_id, Role.all, :id, :title, include_blank: 'nenhum'
