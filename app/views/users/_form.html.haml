@@ -16,7 +16,7 @@
     = f.label :password, 'Senha'
     = f.password_field :password, class: 'form-control', autocomplete: 'new-password'
   .form-group
-    = f.label :role, 'Candidato ao cardo de:'
+    = f.label :role, 'Candidato ao cargo de:'
     = f.collection_select :role_id, Role.all, :id, :title, include_blank: 'nenhum'
   .form-group
     = f.submit 'Salvar', class: 'btn btn-primary'
