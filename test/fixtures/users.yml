@@ -1,0 +1,33 @@
+marcos:
+  id: 1
+  name: Marcos Neves
+  email: marcos.neves@gmail.com
+  password_digest: <%= BCrypt::Password.create('marcos') %>
+  role_id: 1
+
+pedro:
+  id: 2
+  name: Pedro Luis
+  email: pedro.luis@hotmail.com
+  password_digest: <%= BCrypt::Password.create('pedro') %>
+  role_id: 1
+
+maria:
+  id: 3
+  name: Maria Amélia
+  email: maria@gmail.com
+  password_digest: <%= BCrypt::Password.create('maria') %>
+  role_id: 2
+
+ana:
+  id: 4
+  name: Ana Paula
+  email: ana.paula@hotmail.com
+  password_digest: <%= BCrypt::Password.create('ana') %>
+  role_id: 2
+
+izabela:
+  id: 5
+  name: Izabela Vargas
+  email: izametal@yahoo.com
+  password_digest: <%= BCrypt::Password.create('iza') %>
