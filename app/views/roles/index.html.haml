@@ -1,9 +1,11 @@
-%h1 Listing roles
+.float-right= link_to 'Criar Cargo', new_role_path, class: 'btn btn-success'
 
-%table
+%h1 Lista de Cargos
+
+%table.table
   %thead
     %tr
-      %th Title
+      %th Título
       %th
       %th
       %th
@@ -12,10 +14,7 @@
     - @roles.each do |role|
       %tr
         %td= role.title
-        %td= link_to 'Show', role
-        %td= link_to 'Edit', edit_role_path(role)
-        %td= link_to 'Destroy', role, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Exibir', role
+        %td= link_to 'Editar', edit_role_path(role)
+        %td= link_to 'Excluir', role, :method => :delete, :data => { :confirm => 'Tem Certeza?' }
 
-%br
-
-= link_to 'New Role', new_role_path

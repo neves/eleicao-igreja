@@ -6,17 +6,17 @@
         - @user.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
+  .form-group
+    = f.label :email, 'Email'
+    = f.text_field :email, class: 'form-control'
+  .form-group
+    = f.label :name, 'Nome'
+    = f.text_field :name, class: 'form-control'
+  .form-group
     = f.label :password, 'Senha'
-    = f.password_field :password
-  .field
-    = f.label :role
+    = f.password_field :password, class: 'form-control', autocomplete: 'new-password'
+  .form-group
+    = f.label :role, 'Candidato ao cardo de:'
     = f.collection_select :role_id, Role.all, :id, :title, include_blank: 'nenhum'
-  .actions
-    = f.submit 'Save'
+  .form-group
+    = f.submit 'Salvar', class: 'btn btn-primary'
