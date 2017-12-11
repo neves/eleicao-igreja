@@ -1,0 +1,11 @@
+.pt-5
+  - if flash[:error]
+    .alert.alert-danger= flash[:error]
+
+  = form_tag session_path do
+    .form-group
+      = text_field_tag :email, '', placeholder: 'Email', class: 'form-control'
+    .form-group
+      = password_field_tag :password, '', placeholder: 'Senha', class: 'form-control', autocomplete: 'new-password'
+    .form-group
+      = submit_tag 'Entrar', class: 'btn btn-primary'
