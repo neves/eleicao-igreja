@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2017_12_11_130113) do
+ActiveRecord::Schema.define(version: 2017_12_12_133554) do
 
   create_table "roles", force: :cascade do |t|
     t.string "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2017_12_11_130113) do
     t.integer "role_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "votes"
     t.index ["role_id"], name: "index_users_on_role_id"
   end
 
