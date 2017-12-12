@@ -1,2 +1,2 @@
 = javascript_pack_tag 'application'
-#election
+#election{data: @roles_with_candidates.to_json(include: {candidates: {except: :password_digest}})}
