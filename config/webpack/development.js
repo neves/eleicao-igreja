@@ -1,3 +1,4 @@
 const environment = require('./environment')
-
-module.exports = environment.toWebpackConfig()
+const webpackConfig = environment.toWebpackConfig()
+webpackConfig.devtool = 'cheap-module-source-map'
+module.exports = webpackConfig
