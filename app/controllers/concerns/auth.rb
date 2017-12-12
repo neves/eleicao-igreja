@@ -13,7 +13,7 @@ module Auth
   end
 
   def current_user
-    User.find_by_id(current_user_id)
+    @current_user ||= User.find_by_id(current_user_id)
   end
 
   def current_user_id
