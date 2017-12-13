@@ -1,8 +1,9 @@
 %nav.navbar.navbar-expand-sm.navbar-light.bg-light.mb-3
-  = link_to 'Eleição Igreja', root_path, class: 'navbar-brand'
+  .navbar-brand= link_to 'Eleição Igreja', root_path
   %ul.navbar-nav.mr-auto
     - if admin?
       %li.nav-item= link_to 'Usuários', users_path, class: 'nav-link'
       %li.nav-item= link_to 'Cargos', roles_path, class: 'nav-link'
+      %li.nav-item= link_to 'Resultado', result_election_path, class: 'nav-link'
   %ul.navbar-nav
     %li.nav-item= link_to 'Sair', session_path, method: 'delete', class: 'nav-link'

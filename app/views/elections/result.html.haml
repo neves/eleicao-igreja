@@ -1,0 +1,9 @@
+%h2 Resultado da Eleição
+%hr
+- @roles_with_candidates.each do |role|
+  %h3= role.title
+  %ul
+    - role.candidates.sort_by(&:votes_received).reverse.each do |candidate|
+      %li= "#{candidate.name} - (#{candidate.votes_received} votes)"
+%hr
+= link_to 'Excluir Todos Votos', election_path, method: :delete, data: { :confirm => 'Tem Certeza?' }, class: 'btn btn-danger'
