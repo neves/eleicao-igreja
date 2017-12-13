@@ -10,6 +10,7 @@
       %th Email
       %th Nome
       %th Cargo
+      %th Votou?
       %th
       %th
 
@@ -19,6 +20,9 @@
         %td= user.email
         %td= user.name
         %td= user.role
+        %td.text-center
+          - if user.votes?
+            %h3.text-success.mb-0 &#x2713;
         %td= link_to 'Editar', edit_user_path(user)
         %td= link_to 'Excluir', user, :method => :delete, :data => { :confirm => 'Tem Certeza?' }
 
